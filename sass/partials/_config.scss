@@ -1,0 +1,66 @@
+$brand-color: #35A8C7;
+$brand-lighter-color: #6CBDD2;
+$main-bg-color: #f3f3f3;
+$solicitar-prime-btn-color: #D65A5A;
+$solicitar-btn-color: #7ccee6;
+
+
+@mixin rotate($d) { 
+    transform:rotate($d+deg); 
+    -ms-transform:rotate($d+deg); 
+    -webkit-transform:rotate($d+deg); 
+    -o-transform: rotate($d+deg); 
+}
+
+@mixin box-shadow($left, $top, $blur, $color){ 
+    -moz-box-shadow: $left $top $blur $color; 
+    -webkit-box-shadow: $left $top $blur $color; 
+    box-shadow: $left $top $blur $color; 
+}
+
+@mixin border-radius($radius) { 
+ -webkit-border-radius: $radius; 
+ -moz-border-radius: $radius; 
+ -ms-border-radius: $radius; 
+ border-radius: $radius; 
+}
+
+@mixin button($color) {
+    border: {
+        radius: 6px;
+        color: $color; 
+    }
+    background: $color;
+    letter-spacing: 1px;
+}
+
+@mixin gradient($top, $btm, $line) { 
+ background: -moz-linear-gradient(top, $top 0%, $top ($line+%), $btm ($line+%), $btm 100%);
+ background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top), color-stop(($line+%),$top), color-stop(($line+%),$btm), color-stop(100%,$btm));
+ background: -webkit-linear-gradient(top, $top 0%, $top ($line+%), $btm ($line+%), $btm 100%);
+ background: -o-linear-gradient(top, $top 0%, $top ($line+%), $btm ($line+%), $btm 100%);
+ background: -ms-linear-gradient(top, $top 0%, $top ($line+%), $btm ($line+%), $btm 100%);
+ background: linear-gradient(to bottom, $top 0%, $top ($line+%), $btm ($line+%), $btm 100%);
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$top', endColorstr='$btm',GradientType=0 );
+}
+
+
+//Fonts Global
+html {
+  font-size: 100%;
+}
+
+body *{    
+    font-family: Ubuntu;
+    letter-spacing: 0.5px;    
+}
+
+.bold {
+    font-weight: bold;
+}
+.gray {
+    color: #797979;
+}
+.gont_x1_5 {
+    font-size: 1.5em;
+}

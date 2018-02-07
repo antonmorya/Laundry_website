@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="css/jquery.rateyo.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.min.css">
+    <title>Laundry!</title>
+</head>
+
+<body>
+
+    <div hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+
+            <symbol id="polo" viewBox="0 0 512 512">
+                <title>polo</title>
+                <path style="fill:#BDBDBD;" d="M457.376,87.526c-2.844-17.069-15.698-30.74-32.56-34.631L341.51,33.67H170.489L87.183,52.894 c-16.862,3.891-29.715,17.563-32.561,34.632L33.67,213.244l85.511,34.205v256.534h273.637V247.449l85.511-34.205L457.376,87.526z"
+                />
+                <polygon style="fill:#C7CFE2;" points="256,67.875 187.591,8.017 324.409,8.017 " />
+                <path style="fill:#a3a3a3;" d="M65.477,65.477C59.9,71.485,56.03,79.083,54.623,87.526L33.67,213.244l85.511,34.205V136.892 c0-11.34-4.504-22.215-12.523-30.233L65.477,65.477z"
+                />
+                <path style="fill:#909090;" d="M93.528,161.937v75.25l25.653,10.261v-98.338c0-2.361-1.914-4.276-4.276-4.276h-4.276 C101.185,144.835,93.528,152.492,93.528,161.937z"
+                />
+                <polygon style="fill:#D5DCED;" points="39.015,181.177 33.67,213.244 119.182,247.449 119.182,213.244 " />
+                <polygon style="fill:#C7CFE2;" points="93.528,237.187 119.182,247.449 119.182,213.244 93.528,202.983 " />
+                <path style="fill:#D5DCED;" d="M238.898,67.875v94.063c0,4.722,3.829,8.551,8.551,8.551h17.102c4.722,0,8.551-3.829,8.551-8.551 V67.875H238.898z"
+                />
+                <path style="fill:#BDBDBD;" d="M446.523,65.477c5.577,6.008,9.447,13.606,10.855,22.049l20.952,125.718l-85.511,34.205V136.892 c0-11.34,4.504-22.215,12.523-30.233L446.523,65.477z"
+                />
+                <path style="fill:#0096DC;" d="M418.472,161.937v75.25l-25.653,10.261v-98.338c0-2.361,1.914-4.276,4.276-4.276h4.276 C410.815,144.835,418.472,152.492,418.472,161.937z"
+                />
+                <polygon style="fill:#D5DCED;" points="472.985,181.177 478.33,213.244 392.818,247.449 392.818,213.244 " />
+                <polygon style="fill:#C7CFE2;" points="418.472,237.187 392.818,247.449 392.818,213.244 418.472,202.983 " />
+                <rect x="119.182" y="469.779" style="fill:#D5DCED;" width="273.637" height="34.205" />
+                <polygon style="fill:#C7CFE2;" points="238.898,108.256 256,94.575 273.102,108.258 273.102,67.875 238.898,67.875 " />
+                <g>
+                    <path style="fill:#D5DCED;" d="M187.591,8.017L256,67.875l-35.254,28.203c-3.994,3.196-9.882,2.192-12.594-2.145L170.489,33.67 L187.591,8.017z"
+                    />
+                    <path style="fill:#D5DCED;" d="M324.409,8.017L256,67.875l35.254,28.203c3.994,3.196,9.882,2.192,12.594-2.145l37.664-60.262 L324.409,8.017z"
+                    /> </g>
+                <path d="M486.238,211.926L465.284,86.207c-3.391-20.343-18.568-36.487-38.665-41.125l-80.203-18.508L331.079,3.57 c-1.281-1.921-3.326-3.196-5.615-3.5c-0.352-0.047-0.703-0.062-1.055-0.061V0H187.591v0.006c-0.351,0-0.703,0.016-1.055,0.064 c-2.288,0.304-4.335,1.58-5.615,3.5l-15.336,23.005L85.38,45.084c-20.097,4.638-35.273,20.78-38.665,41.125L25.762,211.926 c-0.62,3.717,1.432,7.363,4.93,8.762l80.473,32.189v251.107c0,4.428,3.589,8.017,8.017,8.017h273.637 c4.427,0,8.017-3.588,8.017-8.017V252.877l80.473-32.189C484.805,219.288,486.857,215.642,486.238,211.926z M331.971,33.81 L297.05,89.683c-0.035,0.057-0.127,0.203-0.363,0.245c-0.236,0.037-0.372-0.068-0.423-0.11L268.49,67.599l54.32-47.53L331.971,33.81 z M256,57.222l-47.073-41.189h94.145L256,57.222z M246.914,85.409L256,78.14l9.086,7.268v76.529c0,0.294-0.239,0.534-0.534,0.534 h-17.102c-0.295,0-0.534-0.241-0.534-0.534V85.409z M189.191,20.068l54.32,47.53l-27.773,22.219 c-0.051,0.041-0.186,0.146-0.423,0.11c-0.236-0.041-0.328-0.188-0.363-0.244L180.031,33.81L189.191,20.068z M62.53,88.844 C64.85,74.925,75.235,63.88,88.985,60.706l77.734-17.939l34.634,55.416c2.503,4.005,6.61,6.756,11.267,7.55 c0.925,0.157,1.852,0.235,2.778,0.235c3.736,0,7.398-1.265,10.354-3.63l5.127-4.1v63.701c0,9.136,7.432,16.568,16.568,16.568h17.102 c9.136,0,16.568-7.432,16.568-16.568V98.237l5.128,4.101c2.958,2.365,6.619,3.63,10.354,3.63c0.925,0,1.853-0.077,2.778-0.235 c4.656-0.793,8.763-3.544,11.267-7.551l34.634-55.415l77.735,17.938c13.75,3.175,24.136,14.219,26.455,28.139l14.548,87.286 l-63.183,25.273v-48.017c0-4.428-3.589-8.017-8.017-8.017c-4.427,0-8.017,3.588-8.017,8.017v308.376H127.198V153.386 c0-4.428-3.589-8.017-8.017-8.017c-4.427,0-8.017,3.588-8.017,8.017v48.017L47.984,176.13L62.53,88.844z M42.639,208.197 l2.647-15.877l65.879,26.353v16.936L42.639,208.197z M127.198,495.967v-18.171h257.603v18.171H127.198z M400.835,235.608v-16.936 l65.88-26.351l2.647,15.877L400.835,235.608z"
+                />
+            </symbol>
+
+            <symbol id="jeans" viewBox="0 0 511.999 511.999">
+                <title>jeans</title>
+                <path style="fill:#BDBDBD;" d="M349.417,42.221H162.582c-9.694,0-17.449,8.049-17.091,17.735l16.445,444.027h76.96V162.852 c0-8.519,5.821-16.416,14.23-17.783c10.715-1.743,19.974,6.482,19.974,16.868v342.046h76.96l16.445-444.027 C366.866,50.27,359.11,42.221,349.417,42.221z"
+                />
+                <g>
+                    <polygon style="fill:#BDBDBD;" points="238.897,503.983 238.897,478.33 160.987,478.33 161.936,503.983 " />
+                    <polygon style="fill:#BDBDBD;" points="350.061,503.983 351.012,478.33 273.101,478.33 273.101,503.983 " />
+                    <path style="fill:#BDBDBD;" d="M358.613,44.957V8.017H153.385v36.908c-4.923,3.152-8.128,8.738-7.894,15.032l1.56,42.123h6.334 c23.614,0,42.756-19.143,42.756-42.756V42.221h119.666v17.102c0,23.613,19.142,42.756,42.756,42.756h6.334l1.56-42.123 C366.688,53.684,363.508,48.114,358.613,44.957z"
+                    /> </g>
+                <path d="M367.505,41.894c-0.285-0.296-0.578-0.584-0.874-0.864V8.017c0-4.427-3.589-8.017-8.017-8.017H153.386 c-4.427,0-8.017,3.589-8.017,8.017v33.013c-0.297,0.28-0.589,0.568-0.874,0.864c-4.778,4.959-7.268,11.479-7.014,18.359 l16.446,444.026c0.159,4.31,3.698,7.721,8.011,7.721h76.96c4.427,0,8.017-3.589,8.017-8.017V161.936c0-5.01,4.076-9.086,9.086-9.086 c5.01,0,9.086,4.076,9.086,9.086v342.046c0,4.427,3.589,8.017,8.017,8.017h76.96c4.312,0,7.852-3.411,8.011-7.721l16.443-444.025 C374.773,53.372,372.283,46.852,367.505,41.894z M323.874,50.238h25.542c2.491,0,4.814,0.988,6.543,2.781 c1.728,1.794,2.628,4.152,2.536,6.641l-1.273,34.367c-18.511-0.733-33.348-16.015-33.348-34.704V50.238z M350.596,34.233 c-0.391-0.018-0.785-0.029-1.18-0.029h-42.645V16.033h43.825V34.233z M221.26,34.205V16.033h69.478v18.171H221.26z M161.402,16.033 h43.825v18.171h-42.645c-0.395,0-0.788,0.012-1.18,0.029V16.033z M153.503,59.66C153.503,59.66,153.503,59.659,153.503,59.66 c-0.092-2.489,0.808-4.847,2.536-6.641c1.728-1.794,4.052-2.781,6.543-2.781h25.542v9.086c0,18.689-14.836,33.971-33.348,34.704 L153.503,59.66z M230.88,161.937v334.029h-61.218l-14.293-385.921c27.078-1.048,48.789-23.392,48.789-50.722v-9.086h43.825v87.899 C238.052,141.492,230.88,150.889,230.88,161.937z M342.337,495.967h-61.219V161.937c0-11.048-7.172-20.446-17.102-23.8V50.238 h43.825v9.086c0,27.331,21.71,49.675,48.789,50.722L342.337,495.967z"
+                />
+            </symbol>
+
+            <symbol id="euro_bold" viewBox="0 0 293.826 293.826">
+                <title>euro_bold</title>
+                <path d="M286.606,219.015c-5.18-5.917-12.661-9.311-20.528-9.311c-6.605,0-12.983,2.399-17.961,6.758 c-17.627,15.436-35.722,22.624-56.944,22.624c-26.629,0-48.777-10.711-65.964-31.865H160c15.039,0,27.273-12.112,27.273-27.001 c0-14.888-12.234-26.999-27.273-26.999h-57.107c-0.148-2.103-0.223-4.201-0.223-6.269c0-2.586,0.02-4.046,0.15-5.731h66.304 c15.039,0,27.273-12.336,27.273-27.498c0-15.165-12.234-27.502-27.273-27.502h-43.682C143.218,65.197,165.3,54.55,191.172,54.55 c14.901,0,27.164,3.581,42.328,12.361c4.151,2.404,8.872,3.675,13.652,3.675c9.706,0,18.757-5.214,23.619-13.607 c3.65-6.305,4.628-13.653,2.753-20.69c-1.875-7.04-6.381-12.928-12.685-16.577C237.309,6.079,215.823,0,191.172,0 C135.882,0,87.848,31.119,62.681,83.242c-0.188,0.391-0.383,0.845-0.584,1.323l-0.085,0.201c-0.265,0.624-0.484,1.11-0.657,1.454 H36.864c-15.038,0-27.272,12.337-27.272,27.502c0,15.162,12.234,27.498,27.272,27.498h11.352c-0.072,1.823-0.09,3.593-0.09,5.767 c0,2.051,0.046,4.136,0.137,6.233H27.739c-15.039,0-27.273,12.111-27.273,26.999c0,14.889,12.234,27.001,27.273,27.001h33.406 c11.558,25.57,29.139,47.038,50.881,62.116c23.104,16.021,50.472,24.489,79.146,24.489c34.571,0,64.953-11.888,92.88-36.341 c5.482-4.798,8.766-11.441,9.247-18.708C293.781,231.513,291.404,224.494,286.606,219.015z"
+                    style="fill: #35A8C7" />
+            </symbol>
+
+            <symbol id="euro" viewBox="0 0 489.9 489.9">
+                <title>euro</title>
+                <path d="M423.787,14.6c-24.8-9.7-50.8-14.6-77.4-14.6c-94.8,0-176.2,62.9-210.2,152.1h-57.8c-18.8,0-34,15.2-34,34s15.2,34,34,34 h42c-0.8,8.2-0.8,41.6,0,49.7h-42c-18.8,0-34,15.2-34,34s15.2,34,34,34h57.9c34,89.1,115.4,152.1,210.2,152.1 c21.7,0,43.1-3.3,63.8-9.8c17.9-5.6,27.9-24.8,22.2-42.7c-5.6-17.9-24.8-27.9-42.7-22.2c-14,4.4-28.6,6.6-43.4,6.6 c-57.1,0-107.3-33.6-135.4-84h144.2c18.8,0,34-15.2,34-34s-15.2-34-34-34h-166.3c-1-8.1-1-41.6,0-49.7h166.4c18.8,0,34-15.2,34-34 s-15.2-34-34-34h-144.2c28.1-50.4,78.2-84,135.4-84c18.1,0,35.8,3.3,52.6,9.9c17.5,6.8,37.2-1.8,44.1-19.3 C449.987,41.1,441.387,21.4,423.787,14.6z"
+                    style="fill: #35A8C7" />
+            </symbol>
+        </svg>
+    </div>
+    <header class="container-fluid">
+        <div class="row logo">
+            <img src="img/dress-on-a-hanger.svg" alt="">
+            <h1>La-La-Laundry</h1>
+        </div>
+        <div class="row jumbotron">
+            <div class="container">
+                <div class="promotion-wrapper">
+                    <div class="promotion">
+                        <div class="promotion-circle-wrapper">
+                            <div class="promotion-circle">
+                                <b>T</b>
+                                <b>U</b>
+                                <b>&nbsp;</b>
+                                <b>R</b>
+                                <b>O</b>
+                                <b>P</b>
+                                <b>A</b>
+
+                                <div class="promotion-circle-text">
+                                    <span class="uppercase">lavada y</span>
+                                    <br>
+                                    <span class="uppercase">planchada</span>
+                                    <br>
+                                    <hr>
+                                    <span class="uppercase por"> por </span>
+                                    <hr>
+                                    <br>
+                                    <div>
+                                        <span class="big-sixty">60</span>
+                                        <figure>
+                                            <img src="img/euro.svg" class="promotion-circle-text-icon">
+                                            <figcaption>mes</figcaption>
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--promotion-circle-->
+                        </div>
+                        <!--promotion-circle-wrapper-->
+
+                        <div class="promotion-text">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td rowspan="2">
+                                            <img src="img/big-washing-machine.svg" class="promotion-text-icon">
+                                        </td>
+                                        <td class="bold">lavanderia</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="big_five">5 kg</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td class="semana">/semana</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td rowspan="2">
+                                            <img src="img/ironing-machine.svg" class="promotion-text-icon">
+                                        </td>
+                                        <td class="bold">Plancha</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="big_five">5 kg</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td class="">prendas</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td class="semana">/semana</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <button class="promotion-text-button">Solicitar</button>
+                        </div>
+
+                    </div>
+                    <!--promotion-->
+                </div>
+                <!--promotion-wrapper-->
+            </div>
+            <!--container-->
+        </div>
+    </header>
+    <main>
+        <div class="preocupes">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="preocupes-item text-center">
+                        <div class="preocupes-icon">
+                            <img src="img/notes.svg">
+                        </div>
+                        <span>Mas economico que poner la lavadora</span>
+                    </div>
+                    <div class="preocupes-item text-center">
+                        <div class="preocupes-icon">
+                            <img src="img/cursor.svg">
+                        </div>
+                        <span>Recogida y entrega a domicilio</span>
+                    </div>
+                    <div class="preocupes-item text-center">
+                        <div class="preocupes-icon">
+                            <img src="img/star.svg">
+                        </div>
+                        <span>un servicio de calidad 5 estrellas</span>
+                    </div>
+                    <div class="preocupes-item text-center">
+                        <div class="preocupes-icon">
+                            <img src="img/clock.svg">
+                        </div>
+                        <span>Lo hacemos todo en menos de 48 horas</span>
+                    </div>
+                </div>
+                <!--row-->
+            </div>
+            <!--container-->
+        </div>
+        <!--preocupes-->
+
+        <div class="tenemos">
+            <div class="container">
+                <h1 class="">Tenemos un plan para ti...</h1>
+                <div class="plans row">
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                        <div class="plans-item plans-item_first">
+                            <h2>Plan
+                                <span class="gont_x1_5">Maxi</span>
+                            </h2>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td></td>
+                                        <td>SEMANA*</td>
+                                        <td>MES*</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img class="icon" src="img\big-washing-machine.svg" alt="">
+                                        </td>
+                                        <td>10 kg</td>
+                                        <td>40 kg</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img class="icon" src="img\ironing-machine.svg" alt="">
+                                        </td>
+                                        <td>5
+                                            <svg>
+                                                <use xlink:href="#polo" />
+                                            </svg>
+                                            <svg>
+                                                <use xlink:href="#jeans" />
+                                            </svg>
+                                        </td>
+                                        <td>20
+                                            <svg>
+                                                <use xlink:href="#polo" />
+                                            </svg>
+                                            <svg>
+                                                <use xlink:href="#jeans" />
+                                            </svg>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img class="icon" src="img\euro.svg" alt="">
+                                        </td>
+                                        <td>18
+                                            <sup>75</sup>
+                                            <svg>
+                                                <use xlink:href="#euro" />
+                                            </svg>
+                                        </td>
+                                        <td class="bold">75
+                                            <svg>
+                                                <use xlink:href="#euro_bold" />
+                                            </svg>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <button class="plans-item-button small_button">Solicitar</button>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-md-6 col-lg-4 col-lg-push-4">
+                        <div class="plans-item plans-item_third">
+                            <h2>A medida</h2>
+                            <p>Lavanderia tintoreria limpiezaz especiales...</p>
+
+                            <button class="plans-item-button small_button">Solicitar</button>
+                        </div>
+                    </div>
+
+                    <div class="clearfix hidden-lg"></div>
+
+                    <div class="col-xs-12 col-lg-4 col-lg-pull-4">
+                        <div class="plans-item plans-item_second">
+                            <h2>Plan
+                                <span class="gont_x1_5">Lite</span>
+                            </h2>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td></td>
+                                        <td>SEMANA*</td>
+                                        <td>MES*</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img class="icon" src="img\big-washing-machine.svg" alt="">
+                                        </td>
+                                        <td>5 kg</td>
+                                        <td>20 kg</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img class="icon" src="img\ironing-machine.svg" alt="">
+                                        </td>
+                                        <td>5
+                                            <svg>
+                                                <use xlink:href="#polo" />
+                                            </svg>
+                                            <svg>
+                                                <use xlink:href="#jeans" />
+                                            </svg>
+                                        </td>
+                                        <td>20
+                                            <svg>
+                                                <use xlink:href="#polo" />
+                                            </svg>
+                                            <svg>
+                                                <use xlink:href="#jeans" />
+                                            </svg>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img class="icon" src="img\euro.svg" alt="">
+                                        </td>
+                                        <td>15
+                                            <svg>
+                                                <use xlink:href="#euro" />
+                                            </svg>
+                                        </td>
+                                        <td class="bold">60
+                                            <svg>
+                                                <use xlink:href="#euro_bold" />
+                                            </svg>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <button class="plans-item-button big_button">Solicitar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="feedback">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td rowspan="2" class="photo_cell">
+                                        <img src="img/customers/face_heart_male_static.jpg" class="feedback-client-photo img-responsive img-circle">
+                                    </td>
+                                    <td class="feedback-text">
+                                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint quibusdam in atque!</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="signification_and_stars">
+                                        <span class="feedback-signification">Mickey Mouse</span>
+                                        <div id="rateYo"></div>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!--<div class="row">
+                    <div class="col-xs-12">
+                        <div class="feedback_section">
+                            <div class="photo"><img src="img/customers/face_heart_male_static.jpg" alt=""></div>
+                            <div class="content">
+                                <div class="text">Lorem ipsum dolor sit amet. </div>                                
+                                <div class="stars pull-right"></div>
+                                <div class="who">Lohn Jamek</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-4 col-sm-offset-0">
+                    <h3>Dolor</h3>
+                    <p>lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor</p>
+                    <br/>
+                    <span>phone: </span>
+                    <i>+123456789</i>
+                    <br/>
+                    <span>e-mail: </span>
+                    <i>somemail@google.com</i>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-sm-offset-0">
+                    <h3>Lorem</h3>
+                    <ul>
+                        <li>
+                            <i>One</i>
+                        </li>
+                        <li>
+                            <i>Two</i>
+                        </li>
+                        <li>
+                            <i>Three</i>
+                        </li>
+                        <li>
+                            <i>Four</i>
+                        </li>
+                        <li>
+                            <i>Five</i>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-sm-offset-0">
+                    <h3>Contacts</h3>
+                    <form action="post" class="contacts">
+                        <div>
+                            <label>Nombre:</label>
+                            <span class="input_wrapper">
+                                <input type="tel">
+                            </span>
+                        </div>
+                        <div>
+                            <label>Email:</label>
+                            <span class="input_wrapper">
+                                <input type="email">
+                            </span>
+                        </div>
+                        <div>
+                            <label>Mensage:</label>
+                            <span class="input_wrapper">
+                                <textarea class="message"></textarea>
+                            </span>
+                        </div>
+
+
+
+                        <button>&gt; &nbsp; Envitar</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="ground">
+            All rights are reserved
+
+        </div>
+
+    </footer>
+    <script src="js/jquery-3.2.0.min.js"></script>
+    <script src="js/jquery.rateyo.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

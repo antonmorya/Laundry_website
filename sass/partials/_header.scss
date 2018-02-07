@@ -1,0 +1,203 @@
+@import "_config";
+@import "_settings";
+.uppercase {
+    text-transform: uppercase;
+}
+.big-sixty {
+    font-size: 5.6rem;
+    line-height: 5.6rem;
+    font-weight: 600;
+}
+.logo {
+    padding: 28px 0;
+    text-align: center;
+    img {
+        height: 70px;
+    }
+    h1 {
+        color: $brand-color;
+        font-weight: bolder;
+        font-family: 'Fira Sans';
+        font-size: 2.4rem;
+        margin-top: 13px;
+    }
+}
+.jumbotron {
+    position: relative;
+    height: 555px;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    background: {
+        image: url(../img/hands.jpg);
+        position: center center;
+        repeat: no-repeat;
+        size: cover;
+    }
+    @include sm {
+        display: none;
+    }
+    border-top: 10px solid $brand-color;
+    .container {
+        position: relative;
+    }
+}
+.promotion-wrapper {
+    position: absolute;
+    width: 285px;
+    right: 0;
+    @include sm {
+        display: none;
+    }
+    &:after {
+        content: "";
+        padding-top: 270%;
+        display: block;
+    }
+}
+.promotion {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    @include border-radius(0 0 10px 10px);
+    @include box-shadow(0, 5px, 0, rgba(0, 0, 0, .4));
+    @include gradient(#6CBDD2, #fff, 30);
+    &-circle-wrapper {
+        position: absolute;
+        width: 100%;
+        top: 13%;
+        &:after {
+            content: "";
+            padding-top: 100%;
+            display: block;
+        }
+    }
+    &-circle {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border-radius: 50%;
+        border: .7em solid $brand-color;
+        background: #fff;
+        font-family: 'Ubuntu', sans-serif;
+        & b {
+            position: absolute;
+            left: 50%;
+            width: 0;
+            color: $brand-color;
+            font-size: 2.2rem;
+            font-weight: 500;
+        }
+        ;
+        & b:nth-of-type(-n+7) {
+            bottom: 15%;
+            -ms-transform-origin: 0% 100%;
+            -webkit-transform-origin: 0% 100%;
+            transform-origin: 0% 100%;
+            padding-bottom: 60%;
+        }
+        ;
+        & b:nth-last-of-type(1) {
+            @include rotate(22)
+        }
+        ;
+        & b:nth-last-of-type(2) {
+            @include rotate(14)
+        }
+        ;
+        & b:nth-last-of-type(3) {
+            @include rotate(6)
+        }
+        ;
+        & b:nth-last-of-type(4) {
+            @include rotate(-2)
+        }
+        ;
+        & b:nth-last-of-type(5) {
+            @include rotate(-10)
+        }
+        ;
+        & b:nth-last-of-type(6) {
+            @include rotate(-18)
+        }
+        ;
+        & b:nth-last-of-type(7) {
+            @include rotate(-26)
+        }
+        ;
+        &-text {
+            position: relative;
+            top: 28%;
+            text-align: center;
+            color: $brand-color;
+            & span:first-child:not(.big-sixty) {
+                display: inline-block;
+                font: 1.25rem/1.3rem 'Ubuntu', sans-serif;
+                font-weight: 400;
+            }
+            & span:not(:first-child):not(.big-sixty):not(.por) {
+                display: inline-block;
+                font-size: 1.6rem;
+                line-height: 1.6rem;
+                font-weight: 400;
+                padding-top: 4px;
+            }
+            & .por {
+                font-size: 1.0rem;
+                line-height: 1.5rem;
+            }
+            & hr {
+                border-top: 3px solid $brand-lighter-color;
+                display: inline-block;
+                width: 45px;
+                margin: 0em 0.2em .3em;
+            }
+            &-icon {
+                height: 2.3rem;
+            }
+            & figure {
+                display: inline-block;
+                text-align: right;
+            }
+        }
+    }
+    &-text {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        color: $brand-color;
+        &-button {
+            @include button(#D65A5A);
+            padding: 12px 38px;
+            margin: 40px auto;
+            font-size: 1.4rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            color: #fff;
+        }
+        & table {
+            width: 75%;
+            margin: 15px auto 0;
+        }
+        & table td {
+            padding: 2px 0 0 0;
+            vertical-align: top;
+            color: $brand-color;
+            @include fluid-type($sm, $max_width, 18px, 20px);
+            line-height: 1;
+        }
+        &-icon {
+            height: 3.6rem;
+        }
+        .semana {
+            @include fluid-type($sm, $max_width, 12px, 14px);
+            color: #8d8d8d;
+        }
+        .big_five {
+            font-size: 3em;
+        }
+    }
+}

@@ -1,0 +1,57 @@
+footer {
+    background: $brand-lighter-color;
+    color: white;
+    line-height: 2;
+    font-weight: 14px;
+    h3 {
+        font-weight: 500;
+        @include fluid-type($xs, $max_width, 19px, 22px);
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+        li:before {
+            content: "> ";
+            font-weight: 500;
+        }
+    }
+    .ground {
+        background: $brand-color;
+        text-align: center;
+    }
+}
+
+.contacts {
+    label {
+        float: left;
+        margin: 0;
+    }
+    span {
+        display: block;
+        overflow: hidden;
+        padding: 0 4px 0 6px;
+    }
+    input,
+    textarea {
+        width: 100%
+    }
+    textarea.message,
+    input {
+        background: transparent;
+        border-right: none;
+        border-left: none;
+        border-top: none;
+        border-bottom: 1px solid white;
+    }
+    textarea.message {
+        height: 3em;
+        resize: none;
+    }
+    button {
+        margin-top: 10px;
+        background: transparent;
+        border: none;
+        display: block;
+        margin-left: auto;
+    }
+}
